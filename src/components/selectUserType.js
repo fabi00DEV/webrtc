@@ -8,6 +8,7 @@ export default function selectTypeUser({ option, handle }) {
         <option value="none" selected>seletc a type</option>
         <option value="call">call</option>
         <option value="receiver">Receiver</option>
+        <option value="video">video</option>
     </select>)
 
 }

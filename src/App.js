@@ -4,19 +4,19 @@ import Peer from 'peerjs';
 import Call from './components/call'
 import Receiver from './components/receiver'
 import SelectUserType from './components/selectUserType'
+import UserBroadcaster from './components/userBroadcaster';
 
 function App() {
 
-
   const [wichUser , setWichUser] = useState(null)
   
-
   const handleOption = (option) => setWichUser(option)
 
   const wichRender  = (option) => {
     const toRender = {
+      'video' : <UserBroadcaster></UserBroadcaster>,
       'call' : <Call></Call> , 
-      'receiver' : <Receiver></Receiver>
+      'receiver' : <Receiver></Receiver>,
     }
 
     return toRender[option] || <SelectUserType option={wichUser} handle={handleOption}></SelectUserType>
