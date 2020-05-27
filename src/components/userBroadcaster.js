@@ -17,15 +17,7 @@ const UserBroadcaster = () => {
     },[stream])
 
     const screenSharing = () => {
-        return new Promise((resolve, reject) => {
-            if (navigator.getDisplayMedia) {
-                resolve(navigator.getDisplayMedia({ video: true }))
-            } else if (navigator.mediaDevices.getDisplayMedia) {
-                resolve(navigator.mediaDevices.getDisplayMedia({ video: true }))
-            } else {
-                resolve(navigator.mediaDevices.getUserMedia({ video: { mediaSource: 'screen' } }))
-            }
-        })
+        return navigator.mediaDevices.getDisplayMedia({ video: true })
     }
 
     const getScreenSharing = () => {
