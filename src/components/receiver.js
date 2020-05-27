@@ -7,9 +7,10 @@ export default function Receiver() {
 
     const initConnection = () => {
         const peer = new Peer(null, {
-            host: 'localhost',
-            port: 9000,
-            path: '/'
+            host: '35.194.15.225',
+            port: 9001,
+            path: '/',
+            key: 'peer'
         });
 
         peer.on('open', function (id) {

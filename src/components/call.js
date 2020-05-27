@@ -9,7 +9,7 @@ export default function Call() {
     const makeCall = () => {
 
         const peer = new Peer(null, {
-            host: 'localhost',
+            host: 'http://35.194.15.225',
             port: 9000,
             path: '/'
         });

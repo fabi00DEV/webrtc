@@ -43,9 +43,10 @@ const UserBroadcaster = () => {
     const initPeerConnection = () => {
         if(!peerId){
             peerRef.current = new Peer(null, {
-                host: 'localhost',
-                port: 9000,
-                path: '/'
+                host: '35.194.15.225',
+                port: 9001,
+                path: '/',
+                key: 'peer'
             });
         
             peerRef.current.on('open', (peer_id) => {
